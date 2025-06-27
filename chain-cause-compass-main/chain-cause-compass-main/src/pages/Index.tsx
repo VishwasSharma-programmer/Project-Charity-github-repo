@@ -60,9 +60,7 @@ const Index = () => {
               🚀 Powered by Blockchain Technology
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
-              Transparent Charity
-              <br />
-              Crowdfunding
+              KindaKind
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Revolutionizing charitable giving with blockchain transparency. 
