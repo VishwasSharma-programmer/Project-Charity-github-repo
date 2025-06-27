@@ -1,0 +1,117 @@
+/* Futuristic background: use your own image or a gradient */
+.homepage-bg {
+  min-height: 100vh;
+  background: url('../assets/bg.jpg') center/cover no-repeat, linear-gradient(120deg, #b2fefa 0%, #0ed2f7 100%);
+  font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+  color: #eaf6fb;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+/* Transparent logo at top */
+.homepage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 48px 0 48px;
+  background: transparent;
+}
+
+.homepage-logo {
+  height: 80px;
+  width: auto;
+  opacity: 0.9;
+}
+
+.homepage-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-btn {
+  background: rgba(255,255,255,0.07);
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  color: #0ed2f7;
+  transition: background 0.2s, transform 0.2s;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(14,210,247,0.09);
+}
+.nav-btn:hover {
+  background: rgba(14,210,247,0.18);
+  transform: scale(1.1);
+}
+
+.homepage-main {
+  margin: 60px auto 0 auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.content-block {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 180px;
+}
+.content-block.left {
+  flex-direction: row;
+}
+.content-block.right {
+  flex-direction: row-reverse;
+}
+.content-inner {
+  background: rgba(30, 40, 60, 0.82);
+  border-radius: 20px;
+  padding: 36px 36px 28px 36px;
+  box-shadow: 0 4px 32px rgba(14,210,247,0.09);
+  max-width: 600px;
+  width: 100%;
+}
+.block-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #0ed2f7;
+  margin-bottom: 18px;
+  font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.emoji {
+  font-size: 2.2rem;
+}
+.block-text {
+  font-size: 1.17rem;
+  line-height: 1.7;
+  color: #eaf6fb;
+  font-family: 'Montserrat', Arial, sans-serif;
+  white-space: pre-line;
+}
+
+.homepage-footer {
+  margin: 120px auto 0 auto;
+  padding: 48px 24px 36px 24px;
+  background: rgba(30, 40, 60, 0.85);
+  border-radius: 24px 24px 0 0;
+  max-width: 900px;
+  text-align: center;
+  color: #eaf6fb;
+  font-family: 'Montserrat', Arial, sans-serif;
+  box-shadow: 0 -2px 24px rgba(14,210,247,0.10);
+}
+.homepage-footer h3 {
+  font-size: 1.7rem;
+  color: #0ed2f7;
+  margin-bottom: 12px;
+  font-family: 'Orbitron', 'Montserrat', Arial, sans-serif;
+}
+.homepage-footer p {
+  font-size: 1.09rem;
+  line-height: 1.6;
+}
