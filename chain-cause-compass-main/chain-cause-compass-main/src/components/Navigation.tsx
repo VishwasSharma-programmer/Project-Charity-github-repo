@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Heart, Menu, X } from "lucide-react";
 import { useState } from "react";
+import ConnectWallet from './ConnectWallet';
+
 
 const Navigation = () => {
   const location = useLocation();
@@ -17,6 +19,7 @@ const Navigation = () => {
   ];
 
   return (
+    
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
@@ -51,12 +54,11 @@ const Navigation = () => {
           {/* Action Buttons */}
           <div className="hidden md:flex items-center space-x-4">
             <Button asChild variant="ghost" size="sm">
-              <Link to="/dashboard">Dashboard</Link>
-            </Button>
-            <Button asChild size="sm">
-              <Link to="/login">Connect Wallet</Link>
-            </Button>
+                <Link to="/dashboard">Dashboard</Link>
+              </Button>
+            <ConnectWallet />
           </div>
+
 
           {/* Mobile Menu Button */}
           <Button
@@ -91,10 +93,9 @@ const Navigation = () => {
                 <Button asChild variant="ghost" size="sm">
                   <Link to="/dashboard" onClick={() => setIsMenuOpen(false)}>Dashboard</Link>
                 </Button>
-                <Button asChild size="sm">
-                  <Link to="/login" onClick={() => setIsMenuOpen(false)}>Connect Wallet</Link>
-                </Button>
+                <ConnectWallet />
               </div>
+
             </div>
           </div>
         )}
