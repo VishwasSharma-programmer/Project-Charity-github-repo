@@ -105,7 +105,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto">
           {/* Hero Section */}
           <section className="text-center mb-16">
-            <Badge className="mb-4 bg-blue-100 text-blue-800">About BlockCharity</Badge>
+            <Badge className="mb-4 bg-blue-100 text-blue-800">About KindaKind</Badge>
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
               Revolutionizing Charitable Giving
             </h1>
@@ -180,7 +180,7 @@ const About = () => {
           <section className="mb-16">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose BlockCharity?
+                Why Choose KindaKind?
               </h2>
               <p className="text-xl text-gray-600">
                 Experience the future of charitable giving with our innovative features
@@ -268,7 +268,7 @@ const About = () => {
                   Have questions about our platform? Want to partner with us? 
                   We'd love to hear from you and discuss how we can work together.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                     <Mail className="h-5 w-5 mr-2" />
                     Contact Us
@@ -277,10 +277,10 @@ const About = () => {
                     <MessageCircle className="h-5 w-5 mr-2" />
                     Join Our Community
                   </Button>
-                </div>
+                </div> */}
                 <div className="mt-8 text-sm text-gray-600">
-                  <p>Email: hello@blockcharity.org</p>
-                  <p>Support: support@blockcharity.org</p>
+                  <p>Email: officiallyacoder@gmail.com</p>
+                  {/* <p>Support: support@blockcharity.org</p> */}
                 </div>
               </CardContent>
             </Card>
@@ -301,7 +301,7 @@ const About = () => {
                   <Button asChild size="lg" variant="secondary">
                     <Link to="/campaigns">Browse Campaigns</Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
+                  <Button asChild size="lg" variant="outline" className="text-black border-white hover:bg-white hover:text-blue-600">
                     <Link to="/login">Get Started</Link>
                   </Button>
                 </div>
