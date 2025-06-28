@@ -1,21 +1,70 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PlusCircle, Heart, DollarSign, Users, TrendingUp, Eye, Edit, Trash2, Calendar, Clock } from "lucide-react";
+import { PlusCircle, Heart, DollarSign, Users, TrendingUp, Eye, Edit, Save, Clock, Trash2 } from "lucide-react";
 import Navigation from "@/components/Navigation";
+
+// Helper for generating a consistent random username per wallet
+const generateUsername = (wallet: string) => {
+  const adjectives = ["Brave", "Clever", "Silent", "Mighty", "Gentle"];
+  const animals = ["Tiger", "Falcon", "Panther", "Dolphin", "Wolf"];
+  const randomIndex = (str: string) => {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = str.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    return Math.abs(hash);
+  };
+  const idx = randomIndex(wallet);
+  return `${adjectives[idx % adjectives.length]}${animals[idx % animals.length]}`;
+};
+
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("overview");
+  const [wallet, setWallet] = useState("");
+  const [username, setUsername] = useState("");
+  const [editing, setEditing] = useState(false);
+  const [inputName, setInputName] = useState("");
 
-  // Mock user data
+  useEffect(() => {
+  const storedWallet = localStorage.getItem("walletAddress");
+  console.log("Wallet from localStorage:", storedWallet);
+
+  if (storedWallet) {
+    setWallet(storedWallet);
+
+    const storedName = localStorage.getItem(`username_${storedWallet}`);
+    console.log("Username from localStorage:", storedName);
+
+    if (storedName) {
+      setUsername(storedName);
+    } else {
+      const newName = generateUsername(storedWallet);
+      console.log("Generated new username:", newName);
+      localStorage.setItem(`username_${storedWallet}`, newName);
+      setUsername(newName);
+    }
+  }
+}, []);
+
+
+
+
+  const handleSave = () => {
+    localStorage.setItem(`username_${wallet}`, inputName);
+    setUsername(inputName);
+    setEditing(false);
+  };
+
   const userData = {
-    name: "John Doe",
-    email: "john@example.com",
+    name: username,
+    email: wallet || "Not connected",
     verified: true,
     totalDonated: 2450,
     campaignsCreated: 3,
@@ -23,37 +72,30 @@ const Dashboard = () => {
   };
 
   const myCampaigns = [
-    {
-      id: 1,
-      title: "Local School Library Fund",
-      status: "Active",
-      goal: 10000,
-      raised: 6500,
-      donors: 45,
-      daysLeft: 12,
-      views: 234
-    },
-    {
-      id: 2,
-      title: "Community Garden Project",
-      status: "Completed",
-      goal: 5000,
-      raised: 5000,
-      donors: 32,
-      daysLeft: 0,
-      views: 189
-    },
-    {
-      id: 3,
-      title: "Animal Shelter Support",
-      status: "Under Review",
-      goal: 8000,
-      raised: 0,
-      donors: 0,
-      daysLeft: 30,
-      views: 12
-    }
-  ];
+  {
+    id: 1,
+    title: "Local School Library Fund",
+    status: "Active",
+    goal: 10000,
+    raised: 6500,
+    donors: 45,
+    views: 500,
+    daysLeft: 12
+  },
+  {
+    id: 2,
+    title: "Clean Water for Village",
+    status: "Completed",
+    goal: 8000,
+    raised: 8000,
+    donors: 120,
+    views: 1000,
+    daysLeft: 0
+  }
+];
+
+  
+
 
   const myDonations = [
     {

@@ -60,7 +60,7 @@ const Index = () => {
               🚀 Powered by Blockchain Technology
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-6">
-              KindaKind
+              BlockCharity
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               Revolutionizing charitable giving with blockchain transparency. 
@@ -205,10 +205,10 @@ const Index = () => {
             Join thousands of donors and organizers creating positive change through transparent giving.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" variant="secondary">
+            <Button asChild size="lg" variant="outline" className="text-black border-white hover:bg-white hover:text-blue-600">
               <Link to="/campaigns">Start Donating</Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
+            <Button asChild size="lg" variant="outline" className="text-black border-white hover:bg-white hover:text-blue-600">
               <Link to="/create-campaign">Create Campaign</Link>
             </Button>
           </div>
