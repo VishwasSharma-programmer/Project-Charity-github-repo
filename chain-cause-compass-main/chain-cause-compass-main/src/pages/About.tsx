@@ -42,28 +42,28 @@ const About = () => {
 
   const teamMembers = [
     {
-      name: "Sarah Chen",
-      role: "Founder & CEO",
-      bio: "Former blockchain engineer at major fintech companies. Passionate about using technology for social good.",
-      image: "👩‍💼"
+      name: "Vishwas Sharma",
+      role: "Developer",
+      bio: "Computer science student focused on building clean, user-friendly interfaces. Designs and develops the platform’s frontend to ensure accessibility and transparency for all users.",
+      image: "👨‍🏫"
     },
     {
-      name: "Marcus Rodriguez",
-      role: "CTO",
-      bio: "Full-stack developer with 8+ years in blockchain development and smart contract security.",
+      name: "Nishmith",
+      role: "Blockchain & Smart Contract Learner",
+      bio: "Computer Science student exploring how smart contracts work. Experiments with simple blockchain code and tests features.",
       image: "👨‍💻"
     },
     {
-      name: "Emily Watson",
-      role: "Head of Operations",
-      bio: "Non-profit veteran with 12 years experience in charitable organizations and impact measurement.",
+      name: "H Varsha Ravishankar",
+      role: "Team Lead",
+      bio: "Engineering student interested in blockchain and digital trust. Coordinates tasks, keeps the team organized, and learns backend basics.",
       image: "👩‍🏫"
     },
     {
-      name: "David Kim",
+      name: "Disha Y H",
       role: "Blockchain Architect",
-      bio: "Smart contract specialist and security auditor, ensuring platform integrity and user safety.",
-      image: "👨‍🔧"
+      bio: "Engineering student helping with connecting different parts of the project. Learns how to store files on IPFS and supports basic platform integration.",
+      image: "👩‍💻"
     }
   ];
 
